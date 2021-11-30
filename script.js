@@ -1,19 +1,19 @@
 //------------Task1----------------
 
-let cars = [
-    {
-      "color": "purple",
-      "type": "jeep",
-      "registration": new Date('2017-01-03'),
-      "capacity": 7
-    },
-    {
-      "color": "red",
-      "type": "sedan",
-      "registration": new Date('2018-03-03'),
-      "capacity": 5
-    }
-]
+// let cars = [
+//     {
+//       "color": "purple",
+//       "type": "jeep",
+//       "registration": new Date('2017-01-03'),
+//       "capacity": 7
+//     },
+//     {
+//       "color": "red",
+//       "type": "sedan",
+//       "registration": new Date('2018-03-03'),
+//       "capacity": 5
+//     }
+// ]
 
 //Array Find----------
 // let car = cars.find(car => car.color === "red");
@@ -48,6 +48,18 @@ let cars = [
 //Array every-------------
 // cars.every(car=>car.capacity>=4);
 
+
+//--------------Task2----------------
+
+class Student{
+    constructor(name,surname,age){
+        this.name=name;
+        this.surname=surname;
+        this.age=age;
+    }
+}
+const Student1=new Student('Habib','Ibrahimov',25);
+console.log(Student1);
 
 
 
