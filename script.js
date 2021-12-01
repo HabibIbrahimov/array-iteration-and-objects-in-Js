@@ -52,16 +52,54 @@
 //--------------Task2----------------
 
 class Student{
-    constructor(name,surname,age){
+    constructor(Id,name,surname,age){
+        this.Id=Id;
         this.name=name;
         this.surname=surname;
         this.age=age;
     }
 }
-const Student1=new Student('Habib','Ibrahimov',25);
-console.log(Student1);
 
 
 
+class Group{
+    constructor(GroupName,studentCount,arr=[]){
+        
+        this.GroupName=GroupName;
+        this.studentCount=studentCount;
+        this.arr=arr
+    }
+    
+    
+    addStudent(student){
+        
+        if((this.arr.length<this.studentCount)){
+
+            
+
+            var a=this.arr.find(x=>x.Id===student.Id) 
+            if(a==undefined){
+            this.arr.push(student)
+            
+            }
+            else{
+                console.log("Please enter correct Id");
+            }
+        }
+        else{
+            console.log("The number of students is large");
+        }
+    }
+} 
+const user2=new Student(2,"Habib","Ibrahimov",25)
+const user3=new Student(2,"Habib","Ibrahimov",25)
+const user4=new Student(3,"Habib","Ibrahimov",25)
+
+
+const grup=new Group("P",3)
+grup.addStudent(user2);
+grup.addStudent(user3)
+grup.addStudent(user4)
+console.log(grup.arr)
 
 
